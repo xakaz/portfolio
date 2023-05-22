@@ -12,6 +12,11 @@ body {
     color: #fff;
 }
 
+@font-face {
+    font-family: "BlueSignature";
+    src: url('./assets/fonts/BlueSignature.otf');
+}
+
 /************************************** NAVBAR */
 .navbar {
     position: fixed;
@@ -21,8 +26,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(105, 104, 104, 0.5);
-    padding: 20px;
+    background: rgba(37, 37, 37, 1);
+    padding: 15px;
     border-radius: 10px;
     z-index: 100;
     gap: 10px;
@@ -48,33 +53,27 @@ body {
 .navbar ul li a {
     text-decoration: none;
     color: #fff;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
 .navbar ul li a:hover {
-    color: red;
+    color: rgb(255, 148, 110);
     cursor: pointer;
 }
 
-.icon{
+.icon {
     transform: rotate(90deg);
     font-size: x-large;
     cursor: pointer;
 }
 
-#cross{
+#cross {
     display: none;
 }
 
-#bg-navbar{
-    background: linear-gradient( black 60%, transparent );
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 11vh;
-}
-
-@media screen and (min-width : 1080px){
-    .navbar{
+@media screen and (min-width : 1080px) {
+    .navbar {
         flex-direction: row;
     }
 
@@ -89,67 +88,199 @@ body {
 
     }
 
-    #burger{
+    #burger {
         display: none;
     }
 }
 
 /************************************** PAGES */
 .page {
-    display:flex ;
-    height:100vh;
+    display: flex;
+    height: 100vh;
     width: 100vw;
     justify-content: center;
     align-items: center;
 }
 
 /************************************** HOME */
-#identity{
+#identity {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     height: 40%;
-    width: 60%;
-    background: linear-gradient(rgba(255,255,255,0.5), transparent 50%);
-    animation : shadow-box-name infinite ease-in-out 5s
+    width: 80%;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), transparent 50%);
+    animation: shadow-box-name infinite ease-in-out 5s;
 }
 
-#identity div h1{
+#identity div h1 {
     letter-spacing: 7px;
     animation: glow infinite ease-in-out 2s;
 }
 
-@keyframes glow{
+@media screen and (min-width : 720px) {
+    #identity {
+        height: 40%;
+        width: 60%;
+    }
+}
+
+@media screen and (min-width : 1080px) {
+    #identity {
+        height: 40%;
+        width: 30%;
+    }
+}
+
+@media screen and (min-width : 1920px) {
+    #identity {
+        height: 40%;
+        width: 20%;
+    }
+}
+
+@keyframes glow {
     0% {
         text-shadow: 2px 1px 10px rgba(255, 244, 199, 0);
     }
+
     25% {
         text-shadow: 2px 1px 10px rgba(156, 199, 224, 0.7);
     }
+
     75% {
         text-shadow: 2px 1px 10px rgba(156, 199, 224, 0.7);
     }
+
     100% {
         text-shadow: 2px 1px 10px rgba(255, 244, 199, 0);
     }
 }
 
-@keyframes shadow-box-name{
+@keyframes shadow-box-name {
     0% {
-        box-shadow: 0px -60px 300px rgba(255, 255, 255,0.6);
+        box-shadow: 0px -60px 300px rgba(255, 255, 255, 0.6);
     }
+
     25% {
         box-shadow: 0px -60px 300px rgba(231, 154, 154, 0.6);
     }
+
     50% {
         box-shadow: 0px -60px 300px rgba(156, 199, 224, 0.6);
     }
+
     75% {
-        box-shadow: 0px -60px 300px rgba(148, 225, 93, 0.6);;
+        box-shadow: 0px -60px 300px rgba(148, 225, 93, 0.6);
+        ;
     }
+
     100% {
-        box-shadow: 0px -60px 300px rgba(255, 255, 255,0.6);
+        box-shadow: 0px -60px 300px rgba(255, 255, 255, 0.6);
     }
+}
+
+/************************************** PROJECTS */
+#projets {
+    background: #383333;
+}
+
+#projets h1 {
+    font-family: "BlueSignature";
+    font-size: 100px;
+    padding-right: 50px;
+    width: 50%;
+    text-align: end;
+}
+
+#projets #list-projects {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid white;
+    width: 50%;
+}
+
+.link-project {
+    text-decoration: none;
+    color: white;
+}
+
+.link-project:hover {
+    color: rgba(183, 183, 183, 0.8);
+}
+
+/************************************** TRAINING */
+#formations {
+    background: #3f3f3f
+}
+
+#formations h1 {
+    font-family: "BlueSignature";
+    font-size: 100px;
+    padding-right: 50px;
+    width: 50%;
+    text-align: end;
+}
+
+#formations #training {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid white;
+    width: 50%;
+}
+
+
+/************************************** XP */
+#experiences {
+    background: #2c281a;
+}
+
+#experiences h1 {
+    font-family: "BlueSignature";
+    font-size: 100px;
+    padding-right: 50px;
+    width: 50%;
+    text-align: end;
+}
+
+#experiences #xp {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid white;
+    width: 50%;
+}
+
+/************************************** CONTACT */
+#contact {
+    background: #2f2828;
+}
+
+#contact h1 {
+    font-family: "BlueSignature";
+    font-size: 100px;
+    padding-right: 50px;
+    width: 50%;
+    text-align: end;
+}
+
+#contact #contact-me {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid white;
+    width: 50%;
+}
+
+/* #contact-me h2{
+    padding: 10px;
+} */
+
+.link {
+    color: transparent;
+}
+
+.label a {
+    text-decoration: none;
+    color: transparent;
 }
