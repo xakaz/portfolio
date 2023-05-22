@@ -12,7 +12,7 @@ body {
     color: #fff;
 }
 
-/* NAVBAR */
+/************************************** NAVBAR */
 .navbar {
     position: fixed;
     top: 10px;
@@ -20,18 +20,30 @@ body {
     width: 90%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: rgba(105, 104, 104, 0.5);
     padding: 20px;
     border-radius: 10px;
     z-index: 100;
+    gap: 10px;
 }
 
 .navbar ul {
-    display: flex;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background: rgb(29, 29, 29);
+    padding: 20px;
+    right: 0;
+    top: 100px;
+    justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 10px;
+    gap: 20px;
+    border-radius: 10px;
+    width: 80vw;
 }
+
 
 .navbar ul li a {
     text-decoration: none;
@@ -43,6 +55,16 @@ body {
     cursor: pointer;
 }
 
+.icon{
+    transform: rotate(90deg);
+    font-size: x-large;
+    cursor: pointer;
+}
+
+#cross{
+    display: none;
+}
+
 #bg-navbar{
     background: linear-gradient( black 60%, transparent );
     position: fixed;
@@ -51,7 +73,28 @@ body {
     height: 11vh;
 }
 
-/* PAGES */
+@media screen and (min-width : 1080px){
+    .navbar{
+        flex-direction: row;
+    }
+
+    .navbar ul {
+        gap: 50px;
+        display: flex;
+        position: inherit;
+        flex-direction: row;
+        background: transparent;
+        width: auto;
+        padding: none;
+
+    }
+
+    #burger{
+        display: none;
+    }
+}
+
+/************************************** PAGES */
 .page {
     display:flex ;
     height:100vh;
@@ -60,15 +103,15 @@ body {
     align-items: center;
 }
 
-/* HOME */
+/************************************** HOME */
 #identity{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    height: 50%;
-    width: 50%;
+    height: 40%;
+    width: 60%;
     background: linear-gradient(rgba(255,255,255,0.5), transparent 50%);
     animation : shadow-box-name infinite ease-in-out 5s
 }
