@@ -78,9 +78,10 @@ for (let i = 0; i < listOfProjects.length; i++) {
     div.style.gap = "10px"
 
     span.innerText = listOfProjects[i][2]
-    span.style.fontStyle = "oblique"
+    span.style.fontStyle = "normal"
     span.style.fontWeight = "normal"
     span.style.marginLeft = "15px"
+    span.style.display = "none"
     span.style.color = "rgb(255, 148, 110)"
 
     img.setAttribute('src', './assets/images/' + listOfProjects[i][0] + '/logo.png')
@@ -93,6 +94,12 @@ for (let i = 0; i < listOfProjects.length; i++) {
     a.classList.add("link-project")
 
     div.classList.add("label-project")
+    div.addEventListener("mouseenter",()=>{
+        span.style.display = "inline"
+    })
+    div.addEventListener("mouseleave",()=>{
+        span.style.display = "none"
+    })
 
     a.append(listOfProjects[i][0].toUpperCase())
     p.append(a)
