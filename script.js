@@ -49,19 +49,21 @@ for (let i = 0; i < menuElement.length; i++) {
     })
 }
 
+
+
 ////////////////////////////// PROJECTS
 
 const projects = document.querySelector('#list-projects')
 
 const listOfProjects = [
     [
-        'hypnos', 
-        'https://hypnos-three.vercel.app/', 
+        'hypnos',
+        'https://hypnos-three.vercel.app/',
         "Projet Titre Professionnel Niv 5"
-    ], 
+    ],
     [
-        'watowatch', 
-        "https://tv-shows-data.vercel.app/", 
+        'watowatch',
+        "https://tv-shows-data.vercel.app/",
         "Formation Udemy"
     ]
 ]
@@ -94,10 +96,10 @@ for (let i = 0; i < listOfProjects.length; i++) {
     a.classList.add("link-project")
 
     div.classList.add("label-project")
-    div.addEventListener("mouseenter",()=>{
+    div.addEventListener("mouseenter", () => {
         span.style.display = "inline"
     })
-    div.addEventListener("mouseleave",()=>{
+    div.addEventListener("mouseleave", () => {
         span.style.display = "none"
     })
 
@@ -166,15 +168,15 @@ const xp = document.querySelector('#xp')
 
 const xpList = [
     [
-        "2023", 
-        "Tikilearning", 
-        "Stage Développeur FullStack", 
+        "2023",
+        "Tikilearning",
+        "Stage Développeur FullStack",
         [
             ["python", "Création de modules Odoo"],
-            ["odoo","Création de modules avec Python"], 
-            ["vuejs", "Création de l'UI, Mobile First & Responsive"], 
-            ["tailwind", "Création de l'UI, Mobile First & Responsive"], 
-            ["jira", "Méthode Agile, US, Tickets, Sprint"], 
+            ["odoo", "Création de modules avec Python"],
+            ["vuejs", "Création de l'UI, Mobile First & Responsive"],
+            ["tailwind", "Création de l'UI, Mobile First & Responsive"],
+            ["jira", "Méthode Agile, US, Tickets, Sprint"],
             ["docker", "Utilisation de conteneur"]
         ]
     ],
@@ -247,13 +249,14 @@ for (let i = 0; i < xpList.length; i++) {
         imgxp.style.cursor = "pointer"
         imgxp.addEventListener('mouseenter', () => {
             imgxp.style.filter = 'grayscale(0)'
+            textXp.innerText = language + " : " + languageDescription
         })
         imgxp.addEventListener('mouseleave', () => {
             imgxp.style.filter = 'grayscale(1)'
+            textXp.innerText = ""
         })
-        imgxp.addEventListener('click', () => {
-            textXp.innerText = language + " : " + languageDescription
-        })
+        // imgxp.addEventListener('click', () => {
+        // })
 
         divTextXp.appendChild(textXp)
         imgDivxp.append(imgxp)
