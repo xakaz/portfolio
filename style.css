@@ -208,7 +208,7 @@ body {
 }
 
 .link-project:hover {
-    color: rgba(183, 183, 183, 0.8);
+    color: rgb(255, 148, 110);
 }
 
 /************************************** TRAINING */
@@ -251,6 +251,7 @@ body {
     border-left: 1px solid white;
     width: 50%;
 }
+
 
 /************************************** CONTACT */
 #contact {
