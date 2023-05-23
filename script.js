@@ -204,6 +204,7 @@ for (let i = 0; i < xpList.length; i++) {
 
     xpImgDivContainer.style.display = "flex"
     xpImgDivContainer.style.gap = "10px"
+    xpImgDivContainer.style.flexWrap = "wrap"
 
     divTextXp.style.display = "flex"
     divTextXp.style.alignItems = "center"
