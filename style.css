@@ -45,7 +45,7 @@ a {
     background: rgb(29, 29, 29);
     padding: 20px;
     right: 0;
-    top: 100px;
+    top: 4rem;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -94,7 +94,7 @@ a {
     align-items: center;
     border-radius: 10px;
     height: 40%;
-    width: 60%;
+    width: 80%;
     background: linear-gradient(rgba(255, 255, 255, 0.4), transparent 50%);
     animation: shadow-box-name infinite ease-in-out 5s;
 }
@@ -259,10 +259,16 @@ a {
     text-align: center;
 }
 
-#contact #contact-me {
-    text-align: start;
-    width:80%;
-    margin-left: auto;
+#contact-me {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-me div {
+    display: flex;
+    justify-content: start;
 }
 
 .link {
@@ -271,6 +277,19 @@ a {
 
 .label a {
     color: transparent;
+}
+
+.label h2 {
+    width: 50%;
+    font-size :18px
+}
+
+.label :nth-child(1) {
+    text-align: end;
+}
+
+.label :nth-child(2) {
+    text-align: start;
 }
 
 
@@ -400,16 +419,25 @@ a {
         text-align: end;
     }
 
-    #contact #contact-me {
+    #contact-me {
         margin-left: 10px;
         padding-left: 10px;
         border-left: 1px solid white;
         width: 50%;
-        /* text-align: start; */
+        display: flex;
     }
 
-    #contact-me h2 {
-        padding: 10px;
+    .label {
+        width: 100%;
+    }
+
+    .label :nth-child(1) {
+        width: auto;
+        text-align: start;
+    }
+
+    .label :nth-child(2) {
+        text-align: start;
     }
 }
 

@@ -146,9 +146,13 @@ for (let i = 0; i < trainingInfo.length; i++) {
     h3LabelTraining.append(trainingInfo[i][1].toUpperCase())
     h3LabelTraining.style.color = "rgb(255, 148, 110)"
 
-    pCompanyTraining.append(trainingInfo[i][2] + " - " + trainingInfo[i][3])
-    pCompanyTraining.style.color ='rgb(255, 150, 150)'
+    // pCompanyTraining.append(trainingInfo[i][2] + " - " + trainingInfo[i][3])
+    pCompanyTraining.append(trainingInfo[i][2])
+    pCompanyTraining.style.color ='rgb(255, 148, 110)'
+    pCompanyTraining.style.fontStyle = 'italic'
+    pCompanyTraining.style.letterSpacing = '2px'
 
+    divTitleTraining.style.marginLeft = "10px"
     divDateTraining.appendChild(h2TrainingDate)
     divTitleTraining.setAttribute('data-aos','fade-up')
     divTitleTraining.setAttribute('data-aos-delay','2000')
@@ -230,7 +234,6 @@ for (let i = 0; i < xpList.length; i++) {
     xp.appendChild(div)
 
     for (let y = 0; y < xpList[i][3].length; y++) {
-
         let imgDivxp = document.createElement('div')
         imgDivxp.className = "img-div-xp"
         let imgxp = document.createElement('img')
@@ -256,7 +259,7 @@ for (let i = 0; i < xpList.length; i++) {
         imgDivxp.append(imgxp)
         xpImgDivContainer.appendChild(imgDivxp)
     }
-
+    
     xp.appendChild(xpImgDivContainer)
     xp.appendChild(divTextXp)
 }
