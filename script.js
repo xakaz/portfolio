@@ -1,6 +1,5 @@
 ////////////////////////////// NAVBAR
-
-const menuList = ["Accueil", "Projets", "Formations", "Experiences", "Contact"]
+const menuList = ["Projets", "Formations", "Experiences", "Contact"]
 
 const menu = document.querySelector('ul')
 const cross = document.querySelector('#cross')
@@ -59,17 +58,17 @@ const listOfProjects = [
     [
         'hypnos',
         'https://hypnos-three.vercel.app/',
-        "Projet Titre Professionnel Niv 5"
+        "Titre Professionnel Niv 5"
     ],
     [
         'watowatch',
         "https://tv-shows-data.vercel.app/",
-        "Formation Udemy"
+        "Formation React Udemy"
     ]
 ]
 
 for (let i = 0; i < listOfProjects.length; i++) {
-    let p = document.createElement('h2')
+    let projectH2 = document.createElement('h2')
     let a = document.createElement('a')
     let img = document.createElement('img')
     let div = document.createElement('div')
@@ -79,12 +78,9 @@ for (let i = 0; i < listOfProjects.length; i++) {
     div.style.alignItems = "center"
     div.style.gap = "10px"
 
-    span.innerText = listOfProjects[i][2]
-    span.style.fontStyle = "normal"
-    span.style.fontWeight = "normal"
-    span.style.marginLeft = "15px"
-    span.style.display = "none"
-    span.style.color = "rgb(255, 148, 110)"
+    // span.innerText = listOfProjects[i][2]
+    // span.style.color = "transparent"
+    // span.style.fontFamily = "BlueSignature";
 
     img.setAttribute('src', './assets/images/' + listOfProjects[i][0] + '/logo.png')
     img.style.width = "80px"
@@ -96,18 +92,18 @@ for (let i = 0; i < listOfProjects.length; i++) {
     a.classList.add("link-project")
 
     div.classList.add("label-project")
-    div.addEventListener("mouseenter", () => {
-        span.style.display = "inline"
-    })
-    div.addEventListener("mouseleave", () => {
-        span.style.display = "none"
-    })
+    // div.addEventListener("mouseenter", () => {
+    //     span.style.color = "rgb(255, 148, 110)"
+    // })
+    // div.addEventListener("mouseleave", () => {
+    //     span.style.color = "transparent"
+    // })
 
     a.append(listOfProjects[i][0].toUpperCase())
-    p.append(a)
-    p.append(span)
     div.appendChild(img)
-    div.appendChild(p)
+    projectH2.appendChild(a)
+    div.appendChild(projectH2)
+    // div.appendChild(span)
     projects.appendChild(div)
 }
 
@@ -133,27 +129,33 @@ const trainingInfo = [
 for (let i = 0; i < trainingInfo.length; i++) {
     const divTraining = document.createElement('div')
     divTraining.style.display = "flex"
+    divTraining.style.alignItems = "center"
     divTraining.style.marginBottom = "10px"
+    divTraining.className = "div-training"
 
     const divDateTraining = document.createElement('div')
 
     const divTitleTraining = document.createElement('div')
-    const divCompanyTraining = document.createElement('div')
 
     const h2TrainingDate = document.createElement('h2')
-    const h2LabelTraining = document.createElement('h2')
+    const h3LabelTraining = document.createElement('h4')
     const pCompanyTraining = document.createElement('p')
 
     h2TrainingDate.append(trainingInfo[i][0])
 
-    h2LabelTraining.append(trainingInfo[i][1])
-    h2LabelTraining.style.color = "rgb(255, 148, 110)"
+    h3LabelTraining.append(trainingInfo[i][1].toUpperCase())
+    h3LabelTraining.style.color = "rgb(255, 148, 110)"
 
     pCompanyTraining.append(trainingInfo[i][2] + " - " + trainingInfo[i][3])
+    pCompanyTraining.style.color ='rgb(255, 150, 150)'
 
     divDateTraining.appendChild(h2TrainingDate)
-    divTitleTraining.appendChild(h2LabelTraining)
+    divTitleTraining.setAttribute('data-aos','fade-up')
+    divTitleTraining.setAttribute('data-aos-delay','2000')
+    divTitleTraining.setAttribute('data-aos-duration','1000')
+    divTitleTraining.appendChild(h3LabelTraining)
     divTitleTraining.appendChild(pCompanyTraining)
+    divTitleTraining.style.textAlign = "center"
     // divTitleTraining.style.display = 'flex'
     // divTitleTraining.style.alignItems = 'center'
 
@@ -183,7 +185,7 @@ const xpList = [
     [
         "2022",
         "Hypnos",
-        "Projet Titre Professionnel",
+        "Titre Professionnel",
         [
             ["react", "Création de l'UI, Mobile First & Responsive"],
             ["php", "Interface Administrateur, API"],
@@ -202,15 +204,14 @@ for (let i = 0; i < xpList.length; i++) {
     const xpImgDivContainer = document.createElement('div')
     const divTextXp = document.createElement('div')
     const textXp = document.createElement('p')
+    const companyProfil = document.createElement('div')
 
-
-    xpImgDivContainer.style.display = "flex"
-    xpImgDivContainer.style.gap = "10px"
-    xpImgDivContainer.style.flexWrap = "wrap"
+    xpImgDivContainer.className = "img-container-xp"
 
     divTextXp.style.display = "flex"
     divTextXp.style.alignItems = "center"
-    divTextXp.style.height = "50px"
+    divTextXp.style.height = "40px"
+    divTextXp.style.marginBottom = "20px"
 
     xpDate.append(xpList[i][0])
     xpCompany.append(xpList[i][1])
@@ -218,28 +219,23 @@ for (let i = 0; i < xpList.length; i++) {
     xpProfil.append(xpList[i][2])
 
     const div = document.createElement('div')
-    div.style.display = "flex"
-    // div.style.width = "100%"
+    companyProfil.appendChild(xpCompany)
+    companyProfil.appendChild(xpProfil)
+    companyProfil.className = "company-profil"
+    
+    div.className = "div-xp-date-comp"
     div.appendChild(xpDate)
-    div.appendChild(xpCompany)
-    div.appendChild(xpProfil)
-
+    div.appendChild(companyProfil)
+    
     xp.appendChild(div)
 
     for (let y = 0; y < xpList[i][3].length; y++) {
 
         let imgDivxp = document.createElement('div')
+        imgDivxp.className = "img-div-xp"
         let imgxp = document.createElement('img')
         let language = xpList[i][3][y][0].toUpperCase()
         let languageDescription = xpList[i][3][y][1]
-
-        imgDivxp.style.display = "flex"
-        imgDivxp.style.height = "50px"
-        imgDivxp.style.marginTop = "10px"
-        imgDivxp.style.borderRadius = "10px"
-        imgDivxp.style.alignItems = "center"
-        imgDivxp.style.background = "rgba(255,255,255,1)"
-
 
         imgSrc = `./assets/icons/${xpList[i][3][y][0]}.png`
         imgxp.setAttribute('src', imgSrc)
@@ -255,13 +251,12 @@ for (let i = 0; i < xpList.length; i++) {
             imgxp.style.filter = 'grayscale(1)'
             textXp.innerText = ""
         })
-        // imgxp.addEventListener('click', () => {
-        // })
 
         divTextXp.appendChild(textXp)
         imgDivxp.append(imgxp)
         xpImgDivContainer.appendChild(imgDivxp)
     }
+
     xp.appendChild(xpImgDivContainer)
     xp.appendChild(divTextXp)
 }
