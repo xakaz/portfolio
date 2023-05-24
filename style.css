@@ -272,16 +272,13 @@ a {
 }
 
 .link {
-    color: transparent;
+    color: rgb(255, 148, 110);
 }
 
-.label a {
-    color: transparent;
-}
 
 .label h2 {
     width: 50%;
-    font-size :18px
+    font-size: 18px
 }
 
 .label :nth-child(1) {
@@ -427,8 +424,16 @@ a {
         display: flex;
     }
 
+    .link {
+        color: transparent;
+    }
+
     .label {
         width: 100%;
+    }
+
+    .label h2 {
+        font-size: 32px;
     }
 
     .label :nth-child(1) {

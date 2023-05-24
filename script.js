@@ -148,15 +148,15 @@ for (let i = 0; i < trainingInfo.length; i++) {
 
     // pCompanyTraining.append(trainingInfo[i][2] + " - " + trainingInfo[i][3])
     pCompanyTraining.append(trainingInfo[i][2])
-    pCompanyTraining.style.color ='rgb(255, 148, 110)'
+    pCompanyTraining.style.color = 'rgb(255, 148, 110)'
     pCompanyTraining.style.fontStyle = 'italic'
     pCompanyTraining.style.letterSpacing = '2px'
 
     divTitleTraining.style.marginLeft = "10px"
     divDateTraining.appendChild(h2TrainingDate)
-    divTitleTraining.setAttribute('data-aos','fade-up')
-    divTitleTraining.setAttribute('data-aos-delay','2000')
-    divTitleTraining.setAttribute('data-aos-duration','1000')
+    divTitleTraining.setAttribute('data-aos', 'fade-up')
+    divTitleTraining.setAttribute('data-aos-delay', '2000')
+    divTitleTraining.setAttribute('data-aos-duration', '1000')
     divTitleTraining.appendChild(h3LabelTraining)
     divTitleTraining.appendChild(pCompanyTraining)
     divTitleTraining.style.textAlign = "center"
@@ -226,11 +226,11 @@ for (let i = 0; i < xpList.length; i++) {
     companyProfil.appendChild(xpCompany)
     companyProfil.appendChild(xpProfil)
     companyProfil.className = "company-profil"
-    
+
     div.className = "div-xp-date-comp"
     div.appendChild(xpDate)
     div.appendChild(companyProfil)
-    
+
     xp.appendChild(div)
 
     for (let y = 0; y < xpList[i][3].length; y++) {
@@ -259,7 +259,7 @@ for (let i = 0; i < xpList.length; i++) {
         imgDivxp.append(imgxp)
         xpImgDivContainer.appendChild(imgDivxp)
     }
-    
+
     xp.appendChild(xpImgDivContainer)
     xp.appendChild(divTextXp)
 }
@@ -271,11 +271,14 @@ const label = document.querySelectorAll('.label')
 const linkContact = document.querySelectorAll('.link-contact')
 
 for (let i = 0; i < link.length; i++) {
-    label[i].addEventListener('mouseenter', () => {
-        link[i].style.color = "rgb(255, 148, 110)"
+    if (window.innerWidth > 1080) {
 
-    })
-    label[i].addEventListener('mouseleave', () => {
-        link[i].style.color = "transparent"
-    })
+        label[i].addEventListener('mouseenter', () => {
+            link[i].style.color = "rgb(255, 148, 110)"
+
+        })
+        label[i].addEventListener('mouseleave', () => {
+            link[i].style.color = "transparent"
+        })
+    }
 }
