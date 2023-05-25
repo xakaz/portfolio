@@ -365,6 +365,11 @@ a {
         text-align: end;
     }
 
+    .div-training p {
+        display: flex;
+        font-size: 10px;
+    }
+
     #formations #training {
         margin-left: 10px;
         padding-left: 10px;
