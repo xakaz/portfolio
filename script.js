@@ -138,7 +138,7 @@ for (let i = 0; i < trainingInfo.length; i++) {
     const divTitleTraining = document.createElement('div')
 
     const h2TrainingDate = document.createElement('h2')
-    const h3LabelTraining = document.createElement('h4')
+    const h3LabelTraining = document.createElement('h3')
     const pCompanyTraining = document.createElement('p')
 
     h2TrainingDate.append(trainingInfo[i][0])

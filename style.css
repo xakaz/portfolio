@@ -197,6 +197,10 @@ a {
     align-items: center;
 }
 
+.div-training div h3{
+    font-size: 20px
+}
+
 
 /************************************** XP */
 #experiences {
@@ -368,9 +372,13 @@ a {
         justify-content: start;
     }
 
-    .div-training h4,
+    .div-training h3,
     .div-training p {
         text-align: start;
+    }
+
+    .div-training div h3{
+        font-size: 24px
     }
 
     .link-project{
