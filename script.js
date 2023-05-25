@@ -271,7 +271,7 @@ const label = document.querySelectorAll('.label')
 const linkContact = document.querySelectorAll('.link-contact')
 
 for (let i = 0; i < link.length; i++) {
-    if (window.innerWidth > 1080) {
+    if (window.innerWidth < window.innerHeight) {
 
         label[i].addEventListener('mouseenter', () => {
             link[i].style.color = "rgb(255, 148, 110)"
