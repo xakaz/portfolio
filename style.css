@@ -38,7 +38,7 @@ a {
     color: white;
 }
 
-.navbar ul {
+.navbar ul{
     display: none;
     position: absolute;
     flex-direction: column;
@@ -95,8 +95,10 @@ a {
     border-radius: 10px;
     height: 300px;
     width: 300px;
-    background: linear-gradient(rgba(255, 255, 255, 0.4), transparent 50%);
+    /* background: linear-gradient(rgba(255, 255, 255, 0.4), transparent 50%); */
+    background: rgba(37, 37, 37, 1);
     animation: shadow-box-name infinite ease-in-out 5s;
+    cursor: pointer;
 }
 
 #identity div h1 {
@@ -104,7 +106,13 @@ a {
     animation: glow infinite ease-in-out 2s;
 }
 
-
+#identity-description {
+    display: none;
+    padding: 15%;
+    text-align: center;
+    font-style: italic;
+    animation: glow infinite ease-in-out 2s;
+}
 
 @keyframes glow {
     0% {
@@ -116,7 +124,7 @@ a {
     }
 
     75% {
-        text-shadow: 2px 1px 10px rgba(156, 199, 224, 0.7);
+        text-shadow: 2px 1px 15px rgba(156, 199, 224, 0.7);
     }
 
     100% {
@@ -158,7 +166,6 @@ a {
     padding-right: 50px;
     text-align: center;
     width: 100%;
-    margin-bottom: 3rem;
 }
 
 #projets #list-projects {
@@ -308,18 +315,133 @@ a {
     text-align: start;
 }
 
-/* @media screen and (orientation : landscape) and (max-width : 1079px) {
-    #identity {
-        height: 300px;
-        width: 300px;
-    }
+@media screen and (orientation : landscape) and (max-width : 720px) {
 
     .div-training p{
         display: none;
     }
-} */
 
-@media screen and (min-width : 1080px) or (orientation : landscape){
+    .page {
+        flex-direction: row;
+    }
+
+    #projets h1 {
+        width: 50%;
+        text-align: end;
+    }
+
+    #projets #list-projects {
+        margin-left: 10px;
+        padding-left: 10px;
+        border-left: 1px solid white;
+        width: 50%;
+    }
+
+    /* Training */
+    #formations h1 {
+        font-size: 50px;
+        padding-right: 50px;
+        width: 50%;
+        text-align: end;
+    }
+
+    #formations #training {
+        margin-left: 10px;
+        padding-left: 10px;
+        border-left: 1px solid white;
+        width: 50%;
+    }
+
+    .div-training {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .div-training h3,
+    .div-training p {
+        text-align: start;
+    }
+
+    .div-training div h3{
+        font-size: 12px
+    }
+    .div-training div h2{
+        font-size: 12px
+    }
+
+    /* XP */
+    #xp {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    #xp div {
+        align-items: start;
+    }
+
+    #experiences h1 {
+        font-family: "BlueSignature";
+        font-size: 50px;
+        padding-right: 50px;
+        width: 50%;
+        text-align: end;
+    }
+
+    #experiences #xp {
+        margin-left: 10px;
+        padding-left: 10px;
+        border-left: 1px solid white;
+        width: 50%;
+    }
+
+    .company-profil {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+
+    .div-xp-date-comp h2{
+        font-size: 20px;
+    }
+
+        /* Contact */
+        #contact h1 {
+            font-size: 50px;
+            padding-right: 50px;
+            width: 50%;
+            text-align: end;
+        }
+    
+        #contact-me {
+            margin-left: 10px;
+            padding-left: 10px;
+            border-left: 1px solid white;
+            width: 50%;
+            display: flex;
+        }
+        
+        .label {
+            width: 100%;
+        }
+    
+        .label h2 {
+            font-size: 15px;
+        }
+    
+        .label :nth-child(1) {
+            width: auto;
+            text-align: start;
+        }
+    
+        .label :nth-child(2) {
+            text-align: start;
+        }
+}
+
+@media screen and (min-width : 1080px){
 
     /* Navbar */
     .navbar {
@@ -341,13 +463,6 @@ a {
         display: none;
     }
 
-    /* Homepage */
-    #identity {
-        height: 40%;
-        width: 30%;
-    }
-
-
     /* Pages */
     .page {
         flex-direction: row;
@@ -357,6 +472,7 @@ a {
     #projets h1 {
         width: 50%;
         text-align: end;
+        margin-bottom: 3rem;
     }
 
     #projets #list-projects {
@@ -401,6 +517,7 @@ a {
     .div-training div h3{
         font-size: 24px
     }
+
 
     .link-project{
         font-size: 32px;

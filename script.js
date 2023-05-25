@@ -48,7 +48,21 @@ for (let i = 0; i < menuElement.length; i++) {
     })
 }
 
+////////////////////////////// HOME
+const identity = document.querySelector("#identity")
+const identityName = document.querySelector("#identity-name")
+const identityDescription = document.querySelector("#identity-description")
 
+identity.addEventListener('click', () => {
+    if(identityName.style.display !== "none"){
+        identityName.style.display = "none"
+        identityDescription.style.display = "block"
+    }
+    else {
+        identityName.style.display = "block"
+        identityDescription.style.display = "none"
+    }
+})
 
 ////////////////////////////// PROJECTS
 
