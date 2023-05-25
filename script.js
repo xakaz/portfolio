@@ -147,7 +147,7 @@ for (let i = 0; i < trainingInfo.length; i++) {
     h3LabelTraining.style.color = "rgb(255, 148, 110)"
 
     pCompanyTraining.append(trainingInfo[i][2])
-    pCompanyTraining.style.color = 'rgb(255, 148, 110)'
+    pCompanyTraining.style.color = 'white'
     pCompanyTraining.style.fontStyle = 'italic'
     pCompanyTraining.style.letterSpacing = '2px'
 

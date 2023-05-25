@@ -368,6 +368,7 @@ a {
     .div-training p {
         display: flex;
         font-size: 10px;
+        color: white;
     }
 
     #formations #training {
