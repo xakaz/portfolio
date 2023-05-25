@@ -208,7 +208,6 @@ a {
 #experiences h1 {
     font-family: "BlueSignature";
     font-size: 70px;
-    padding-right: 50px;
     width: 100%;
     text-align: center;
 }
@@ -225,10 +224,6 @@ a {
     align-items: center;
 
 }
-
-/* .company-profil h2 {
-    font-size: 20px;
-} */
 
 .img-container-xp {
     display: flex;
