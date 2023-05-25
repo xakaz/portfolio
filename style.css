@@ -308,7 +308,7 @@ a {
     text-align: start;
 }
 
-@media screen and (orientation : landscape) and (max-width : 1079px) {
+/* @media screen and (orientation : landscape) and (max-width : 1079px) {
     #identity {
         height: 300px;
         width: 300px;
@@ -317,9 +317,9 @@ a {
     .div-training p{
         display: none;
     }
-}
+} */
 
-@media screen and (min-width : 1080px) {
+@media screen and (min-width : 1080px) or (orientation : landscape){
 
     /* Navbar */
     .navbar {
