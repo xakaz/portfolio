@@ -167,6 +167,10 @@ a {
     justify-content: center;
 }
 
+.link-project{
+    font-size: 20px;
+}
+
 .link-project:hover {
     color: rgb(255, 148, 110);
 }
@@ -367,6 +371,10 @@ a {
     .div-training h4,
     .div-training p {
         text-align: start;
+    }
+
+    .link-project{
+        font-size: 32px;
     }
 
     /* XP */
