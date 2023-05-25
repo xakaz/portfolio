@@ -323,6 +323,19 @@ a {
 }
 
 @media screen and (orientation : landscape) and (max-width : 1079px) {
+    #identity {
+        height: 200px;
+        width: 200px;
+    }
+
+    #identity div h1{
+        letter-spacing: 0px;
+        font-size: 20px;
+    }
+
+    #identity div p {
+        font-size: 10px;
+    }
 
     .div-training p {
         display: none;
