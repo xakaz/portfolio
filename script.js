@@ -90,7 +90,6 @@ for (let i = 0; i < listOfProjects.length; i++) {
     div.appendChild(img)
     projectH2.appendChild(a)
     div.appendChild(projectH2)
-    // div.appendChild(span)
     projects.appendChild(div)
 }
 
@@ -133,7 +132,6 @@ for (let i = 0; i < trainingInfo.length; i++) {
     h3LabelTraining.append(trainingInfo[i][1].toUpperCase())
     h3LabelTraining.style.color = "rgb(255, 148, 110)"
 
-    // pCompanyTraining.append(trainingInfo[i][2] + " - " + trainingInfo[i][3])
     pCompanyTraining.append(trainingInfo[i][2])
     pCompanyTraining.style.color = 'rgb(255, 148, 110)'
     pCompanyTraining.style.fontStyle = 'italic'
@@ -147,8 +145,6 @@ for (let i = 0; i < trainingInfo.length; i++) {
     divTitleTraining.appendChild(h3LabelTraining)
     divTitleTraining.appendChild(pCompanyTraining)
     divTitleTraining.style.textAlign = "center"
-    // divTitleTraining.style.display = 'flex'
-    // divTitleTraining.style.alignItems = 'center'
 
     divTraining.appendChild(divDateTraining)
     divTraining.appendChild(divTitleTraining)
@@ -248,6 +244,16 @@ for (let i = 0; i < xpList.length; i++) {
     }
 
     xp.appendChild(xpImgDivContainer)
+
+    if (navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)) { 
+            xpImgDivContainer.style.display = "none"
+        }
     xp.appendChild(divTextXp)
 }
 
