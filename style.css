@@ -167,6 +167,12 @@ a {
     justify-content: center;
 }
 
+.label-project img{
+    width: 50px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
 .link-project{
     font-size: 20px;
 }
@@ -349,6 +355,12 @@ a {
         padding-left: 10px;
         border-left: 1px solid white;
         width: 50%;
+    }
+
+    .label-project img{
+        width: 80px;
+        padding: 10px;
+        border-radius: 15px;
     }
 
     /* Training */

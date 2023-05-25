@@ -78,26 +78,13 @@ for (let i = 0; i < listOfProjects.length; i++) {
     div.style.alignItems = "center"
     div.style.gap = "10px"
 
-    // span.innerText = listOfProjects[i][2]
-    // span.style.color = "transparent"
-    // span.style.fontFamily = "BlueSignature";
-
     img.setAttribute('src', './assets/images/' + listOfProjects[i][0] + '/logo.png')
-    img.style.width = "80px"
-    img.style.padding = "10px"
-    img.style.borderRadius = "20px"
 
     a.setAttribute('href', listOfProjects[i][1])
     a.setAttribute('target', '_blank')
     a.classList.add("link-project")
 
     div.classList.add("label-project")
-    // div.addEventListener("mouseenter", () => {
-    //     span.style.color = "rgb(255, 148, 110)"
-    // })
-    // div.addEventListener("mouseleave", () => {
-    //     span.style.color = "transparent"
-    // })
 
     a.append(listOfProjects[i][0].toUpperCase())
     div.appendChild(img)
