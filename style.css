@@ -93,8 +93,8 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    height: 40%;
-    width: 80%;
+    height: 300px;
+    width: 300px;
     background: linear-gradient(rgba(255, 255, 255, 0.4), transparent 50%);
     animation: shadow-box-name infinite ease-in-out 5s;
 }
@@ -193,7 +193,7 @@ a {
     text-align: center;
 }
 
-#formations #training {
+#training {
     width: 100%;
 }
 
@@ -308,7 +308,16 @@ a {
     text-align: start;
 }
 
+@media screen and (orientation : landscape) and (max-width : 1079px) {
+    #identity {
+        height: 300px;
+        width: 300px;
+    }
 
+    .div-training p{
+        display: none;
+    }
+}
 
 @media screen and (min-width : 1080px) {
 
