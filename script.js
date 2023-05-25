@@ -209,11 +209,6 @@ for (let i = 0; i < xpList.length; i++) {
 
     xpImgDivContainer.className = "img-container-xp"
 
-    divTextXp.style.display = "flex"
-    divTextXp.style.alignItems = "center"
-    divTextXp.style.height = "40px"
-    divTextXp.style.marginBottom = "20px"
-
     xpDate.append(xpList[i][0])
     xpCompany.append(xpList[i][1])
     xpCompany.style.color = "rgb(255, 148, 110)"
@@ -252,6 +247,7 @@ for (let i = 0; i < xpList.length; i++) {
             textXp.innerText = ""
         })
 
+        divTextXp.className = "text-xp"
         divTextXp.appendChild(textXp)
         imgDivxp.append(imgxp)
         xpImgDivContainer.appendChild(imgDivxp)
