@@ -78,6 +78,11 @@ const listOfProjects = [
         'watowatch',
         "https://tv-shows-data.vercel.app/",
         "Formation React Udemy"
+    ],
+    [
+        'sabcoiffure',
+        "https://sabrina-coiffure-a-domicile.vercel.app/",
+        "Formation React Udemy"
     ]
 ]
 

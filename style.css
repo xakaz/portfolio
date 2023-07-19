@@ -20,15 +20,13 @@ body {
 /************************************** NAVBAR */
 .navbar {
     position: fixed;
-    top: 10px;
-    left: 5%;
-    width: 90%;
+    top: 0;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(37, 37, 37, 1);
+    background: black;
     padding: 15px;
-    border-radius: 10px;
     z-index: 100;
     gap: 10px;
 }
@@ -84,26 +82,47 @@ a {
     width: 100vw;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    position: relative;
 }
 
 /************************************** HOME */
+
+#accueil video{
+    filter: grayscale();
+    opacity: 20%;
+    position: absolute;
+}
+
 #identity {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    height: 250px;
-    width: 250px;
-    /* background: linear-gradient(rgba(255, 255, 255, 0.4), transparent 50%); */
-    background: rgba(37, 37, 37, 1);
-    animation: shadow-box-name infinite ease-in-out 5s;
+    height: 500px;
+    width: fit-content;
     cursor: pointer;
 }
 
-#identity div h1 {
+#identity-name h1 {
+    font-size: large;
     letter-spacing: 7px;
-    animation: glow infinite ease-in-out 2s;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-left: 1px solid white;
+    padding: 30px;
+}
+
+#identity-name p {
+    text-transform: uppercase;
+    font-size: large;
+    text-align: end;
+    letter-spacing: 7px;
+    font-weight: 100;
+    border-right: 1px solid white;
+    padding: 30px;
 }
 
 #identity-description {
@@ -112,47 +131,6 @@ a {
     text-align: center;
     font-style: italic;
     animation: glow infinite ease-in-out 2s;
-}
-
-@keyframes glow {
-    0% {
-        text-shadow: 2px 1px 10px rgba(255, 244, 199, 0);
-    }
-
-    25% {
-        text-shadow: 2px 1px 10px rgba(156, 199, 224, 0.7);
-    }
-
-    75% {
-        text-shadow: 2px 1px 15px rgba(156, 199, 224, 0.7);
-    }
-
-    100% {
-        text-shadow: 2px 1px 10px rgba(255, 244, 199, 0);
-    }
-}
-
-@keyframes shadow-box-name {
-    0% {
-        box-shadow: 0px -60px 300px rgba(255, 255, 255, 0.6);
-    }
-
-    25% {
-        box-shadow: 0px -60px 300px rgba(231, 154, 154, 0.6);
-    }
-
-    50% {
-        box-shadow: 0px -60px 300px rgba(156, 199, 224, 0.6);
-    }
-
-    75% {
-        box-shadow: 0px -60px 300px rgba(148, 225, 93, 0.6);
-        ;
-    }
-
-    100% {
-        box-shadow: 0px -60px 300px rgba(255, 255, 255, 0.6);
-    }
 }
 
 /************************************** PROJECTS */
@@ -324,17 +302,18 @@ a {
 
 @media screen and (orientation : landscape) and (max-width : 1079px) {
     #identity {
-        height: 200px;
-        width: 200px;
+        height: 500px;
+        width: 500px;
     }
 
     #identity div h1{
         letter-spacing: 0px;
-        font-size: 20px;
+        font-size: 100px;
     }
 
-    #identity div p {
-        font-size: 10px;
+    #identity-name p {
+        font-size: 80px;
+        text-align: end;
     }
 
     .div-training p {
@@ -492,6 +471,20 @@ a {
 }
 
 @media screen and (min-width : 1080px) {
+    #identity {
+        height: 500px;
+        width: 500px;
+    }
+
+    #identity div h1{
+        letter-spacing: 0px;
+        font-size: 100px;
+    }
+
+    #identity-name p {
+        font-size: 80px;
+        text-align: end;
+    }
 
     /* Navbar */
     .navbar {
@@ -639,7 +632,7 @@ a {
     }
 
     .link {
-        color: transparent;
+        color: rgb(255, 148, 110);
     }
 
     .label {
@@ -664,7 +657,17 @@ a {
 
     /* Homepage */
     #identity {
-        height: 40%;
-        width: 20%;
+        height: 500px;
+        width: 500px;
+    }
+
+    #identity div h1{
+        letter-spacing: 0px;
+        font-size: 100px;
+    }
+
+    #identity-name p {
+        font-size: 80px;
+        text-align: end;
     }
 }
